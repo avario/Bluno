@@ -9,20 +9,21 @@
 /* Begin PBXBuildFile section */
 		B6AA2A1D2338C7290002BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA2A1C2338C7290002BB94 /* AppDelegate.swift */; };
 		B6AA2A1F2338C7290002BB94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA2A1E2338C7290002BB94 /* SceneDelegate.swift */; };
-		B6AA2A212338C7290002BB94 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA2A202338C7290002BB94 /* StatusView.swift */; };
+		B6AA2A212338C7290002BB94 /* StatusScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA2A202338C7290002BB94 /* StatusScreen.swift */; };
 		B6AA2A232338C72C0002BB94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6AA2A222338C72C0002BB94 /* Assets.xcassets */; };
 		B6AA2A262338C72C0002BB94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6AA2A252338C72C0002BB94 /* Preview Assets.xcassets */; };
 		B6AA2A292338C72C0002BB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6AA2A272338C72C0002BB94 /* LaunchScreen.storyboard */; };
 		B6AA2A312338D1210002BB94 /* BlunoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA2A302338D1210002BB94 /* BlunoService.swift */; };
 		B6AA2A372338FA6F0002BB94 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA2A362338FA6F0002BB94 /* ConnectView.swift */; };
 		B6AA2A392339E2870002BB94 /* PeripheralStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA2A382339E2870002BB94 /* PeripheralStateView.swift */; };
+		B6FCE87223472C3100660FB6 /* StatusScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCE87123472C3100660FB6 /* StatusScreenData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B6AA2A192338C7290002BB94 /* Bluno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6AA2A1C2338C7290002BB94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6AA2A1E2338C7290002BB94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6AA2A202338C7290002BB94 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		B6AA2A202338C7290002BB94 /* StatusScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusScreen.swift; sourceTree = "<group>"; };
 		B6AA2A222338C72C0002BB94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6AA2A252338C72C0002BB94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B6AA2A282338C72C0002BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		B6AA2A302338D1210002BB94 /* BlunoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlunoService.swift; sourceTree = "<group>"; usesTabs = 1; };
 		B6AA2A362338FA6F0002BB94 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
 		B6AA2A382339E2870002BB94 /* PeripheralStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralStateView.swift; sourceTree = "<group>"; };
+		B6FCE87123472C3100660FB6 /* StatusScreenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusScreenData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +67,8 @@
 			children = (
 				B6AA2A1C2338C7290002BB94 /* AppDelegate.swift */,
 				B6AA2A1E2338C7290002BB94 /* SceneDelegate.swift */,
-				B6AA2A202338C7290002BB94 /* StatusView.swift */,
-				B6AA2A362338FA6F0002BB94 /* ConnectView.swift */,
+				B6FCE87023472BE700660FB6 /* Status Screen */,
+				B6DC6551234DFD1C009433B2 /* Connect Screen */,
 				B6AA2A382339E2870002BB94 /* PeripheralStateView.swift */,
 				B6AA2A322338D1250002BB94 /* Bluno */,
 				B6AA2A222338C72C0002BB94 /* Assets.xcassets */,
@@ -91,6 +93,23 @@
 				B6AA2A302338D1210002BB94 /* BlunoService.swift */,
 			);
 			path = Bluno;
+			sourceTree = "<group>";
+		};
+		B6DC6551234DFD1C009433B2 /* Connect Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B6AA2A362338FA6F0002BB94 /* ConnectView.swift */,
+			);
+			path = "Connect Screen";
+			sourceTree = "<group>";
+		};
+		B6FCE87023472BE700660FB6 /* Status Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B6AA2A202338C7290002BB94 /* StatusScreen.swift */,
+				B6FCE87123472C3100660FB6 /* StatusScreenData.swift */,
+			);
+			path = "Status Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,10 +185,11 @@
 			files = (
 				B6AA2A1D2338C7290002BB94 /* AppDelegate.swift in Sources */,
 				B6AA2A1F2338C7290002BB94 /* SceneDelegate.swift in Sources */,
+				B6FCE87223472C3100660FB6 /* StatusScreenData.swift in Sources */,
 				B6AA2A392339E2870002BB94 /* PeripheralStateView.swift in Sources */,
 				B6AA2A312338D1210002BB94 /* BlunoService.swift in Sources */,
 				B6AA2A372338FA6F0002BB94 /* ConnectView.swift in Sources */,
-				B6AA2A212338C7290002BB94 /* StatusView.swift in Sources */,
+				B6AA2A212338C7290002BB94 /* StatusScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

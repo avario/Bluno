@@ -17,7 +17,7 @@ class BlunoService: NSObject, ObservableObject {
 
 	@Published var detectedPeripherals: [CBPeripheral] = []
 
-	@Published var messages: [String] = []
+	let receivedData = PassthroughSubject<Data, Never>()
 
 	static let serviceID = "dfb0"
 	static let dataCharacteristicID = "dfb1"
@@ -147,12 +147,11 @@ extension BlunoService: CBPeripheralDelegate {
 	}
 	
 	func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-		guard let data = characteristic.value,
-			let message = String(data: data, encoding: .utf8) else {
+		guard let data = characteristic.value else {
 				return
 		}
-
-		messages.insert(message, at: 0)
+		
+		receivedData.send(data)
 	}
 
 }
