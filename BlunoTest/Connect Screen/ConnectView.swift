@@ -11,7 +11,7 @@ import CoreBluetooth
 
 struct ConnectView: View {
 	
-	@ObservedObject var blunoService: BlunoService
+	@EnvironmentObject var blunoService: BlunoService
 	
 	var body: some View {
 		List {
@@ -41,21 +41,18 @@ struct ConnectView: View {
 		.listStyle(GroupedListStyle())
 		.navigationBarTitle("Devices")
 		.navigationBarItems(
-			trailing: Button(action: self.disconnect) {
+			trailing: Button(action: self.blunoService.disconnect) {
 				Text("Disconnect")
 			}.disabled(blunoService.peripheralState != .connected)
 		)
-	}
-
-	func disconnect() {
-		blunoService.disconnect()
 	}
 }
 
 struct ConnectView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
-			ConnectView(blunoService: BlunoService())
+			ConnectView()
+				.environmentObject(BlunoService())
 		}
 	}
 }

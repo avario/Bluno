@@ -20,7 +20,7 @@ struct StatusScreen: View {
 		NavigationView {
 			List {
 				Section(header: Text("Status".uppercased())) {
-					NavigationLink(destination: ConnectView(blunoService: blunoService)) {
+					NavigationLink(destination: ConnectView()) {
 						if blunoService.pairedPeripheral == nil {
 							Text("Not Paired")
 						} else {
@@ -55,6 +55,15 @@ struct StatusScreen: View {
 				Text(String(value))
 					.foregroundColor(.secondary)
 			}
+		}
+	}
+}
+
+struct StatusScreen_Previews: PreviewProvider {
+	static var previews: some View {
+		NavigationView {
+			StatusScreen(data: StatusScreenData())
+				.environmentObject(BlunoService())
 		}
 	}
 }
